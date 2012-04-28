@@ -41,7 +41,6 @@ css[global.css][description] = 'This file holds all the globally active custom C
 css[global.css][options][weight] = '10'
 version = '1.x'
 fonts[fontsquirrel][0] = 'Snickles'
-fonts[fontsquirrel][1] = 'Snickles'
 settings[toggle_logo] = '0'
 settings[toggle_name] = '0'
 settings[toggle_slogan] = '0'

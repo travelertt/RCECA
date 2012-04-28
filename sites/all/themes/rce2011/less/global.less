@@ -24,6 +24,19 @@
 @white: #fff;
 @bodyColor: #fff;
 
+
+@font-face {
+    font-family: 'SnicklesRegular';
+    src: url('Snickles-webfont.eot');
+    src: url('Snickles-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Snickles-webfont.woff') format('woff'),
+         url('Snickles-webfont.ttf') format('truetype'),
+         url('Snickles-webfont.svg#SnicklesRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 //border-box Mixin
 .border-box { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -40,6 +53,8 @@ body {
 }
 #page {
   background-image: url("../images/dot-1px-3x3.gif");
+  background-attachment: fixed;
+  background-repeat: repeat;
 }
 #zone-header, #zone-preface, #zone-content {
   background:#ffffff;
@@ -196,7 +211,7 @@ table.views-view-grid {
       background: -moz-linear-gradient(bottom, @medOrange 0%, @lightOrange 100%);
       background: -webkit-linear-gradient(bottom, @medOrange 0%, @lightOrange 100%);
       background: -ms-linear-gradient(bottom, @medOrange 0%, @lightOrange 100%);
-      font-size: 2em;
+      font-size: 1.5em;
       border-radius: 10px;
       padding: 5px 5px 0 5px;
       text-shadow: 1px 1px 1px rgba(51, 51, 51, 0.5), 0px -1px 0px rgba(150, 150, 150, 0.5);
