@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Provided Services feature.
+ */
+
+include_once 'provided_services.features.inc';

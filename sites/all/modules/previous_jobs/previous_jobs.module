@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Previous Jobs feature.
+ */
+
+include_once 'previous_jobs.features.inc';
