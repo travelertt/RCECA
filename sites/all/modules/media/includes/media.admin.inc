@@ -179,7 +179,6 @@ function media_admin_thumbnails(&$parent_form) {
 
   $fids = $query->execute()->fetchCol();
   $files = file_load_multiple($fids);
-  $files = array();
 
   // Hide the operations form if there are no files to operate on.
   $parent_form['options']['#access'] &= !empty($files);
@@ -199,7 +198,6 @@ function media_admin_thumbnails(&$parent_form) {
 
     foreach ($files as $file) {
       $preview = media_get_thumbnail_preview($file, TRUE);
-      if (!isset($preview['#file'])) { dpm($file); }
       $form['files'][$file->fid] = array(
         '#type' => 'checkbox',
         '#title' => '',
@@ -587,6 +585,7 @@ function media_admin_config_browser($form, &$form_state) {
     '#title' => t('Allowed file extensions'),
     '#default_value' => media_variable_get('file_extensions'),
     '#description' => t('File extensions which are accepted in the media browser.  Use spaces to separate (e.g. "jpg gif pdf doc"). <br/><em>Note that this can be overriden on a per-field basis when creating multimedia asset fields and files of certain extensions cannot be embedded at this time.</em>'),
+    '#maxlength' => 255,
   );
 
   $form['#submit'][] = 'media_admin_config_browser_pre_submit';

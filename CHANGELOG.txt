@@ -1,6 +1,7 @@
 
 Drupal 7.13 xxxx-xx-xx (development version)
 ----------------------
+- Fixed DB Case Sensitivity: Allow BINARY attribute in MySQL.
 
 Drupal 7.12, 2012-02-01
 ----------------------
