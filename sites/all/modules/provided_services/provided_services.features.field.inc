@@ -10,7 +10,7 @@
 function provided_services_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-services-body'
+  // Exported field: 'node-services-body'.
   $fields['node-services-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function provided_services_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -84,11 +85,11 @@ function provided_services_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-services-field_image'
+  // Exported field: 'node-services-field_image'.
   $fields['node-services-field_image'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_image',
@@ -105,6 +106,7 @@ function provided_services_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -146,6 +148,7 @@ function provided_services_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
