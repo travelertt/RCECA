@@ -13,7 +13,7 @@
 body {
   color: #333333;
   background: #21638c;
-  background: url("../images/truck-bike-darren.jpg") no-repeat top center fixed;
+  background: url("../images/background.jpg") no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
