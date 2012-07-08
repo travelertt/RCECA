@@ -12,8 +12,7 @@
 }
 body {
   color: #333333;
-  background: #21638c;
-  background: url("../images/background.jpg") no-repeat top center fixed;
+  background: #93aedc;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,15 +21,9 @@ body {
   font-family: sans-serif;
 }
 #page {
-  background-image: url("../images/dot-1px-3x3.gif");
   background-attachment: fixed;
   background-repeat: repeat;
-}
-#zone-header,
-#zone-preface,
-#zone-content {
-  background: #ffffff;
-  background: rgba(255, 255, 255, 0.9);
+  border-top: 4px solid #aaacaf;
 }
 h1,
 h2,
@@ -51,10 +44,18 @@ a:visited {
 a:hover {
   color: #93aedc;
 }
-.zone-menu,
-.zone-user {
+.zone-user-wrapper {
+  background: #aaacaf;
+}
+.zone-user-wrapper a {
+  color: #ffffff;
+}
+.zone-menu-wrapper {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
   background-image: url("../images/blue-wood2.jpeg");
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none'
+  http://www.colorzilla.com/gradient-editor/#3667c2+0,3667c2+100&0.7+0,0.7+100;Custom
+  */
 
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM2NjdjMiIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2NjdjMiIgc3RvcC1vcGFjaXR5PSIwLjciLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
   background: -moz-linear-gradient(top, rgba(54, 103, 194, 0.7) 0%, rgba(54, 103, 194, 0.7) 100%), url("../images/blue-wood2.jpeg");
@@ -80,22 +81,36 @@ a:hover {
 
   background-repeat: repeat;
 }
-.zone-menu {
+.zone-menu-wrapper .zone-menu {
   min-height: 100px;
 }
-.zone-menu a {
+.zone-menu-wrapper .zone-menu .block-main-menu {
+  padding: 1em 0;
+}
+.zone-menu-wrapper .zone-menu .block-main-menu a {
   color: #a9abaf;
   text-shadow: 0px -1px 0px rgba(51, 51, 51, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.5);
-  font-size: 2em;
+  font-family: 'SnicklesRegular', sans-serif;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.8em;
+}
+.zone-menu-wrapper .zone-menu .block-main-menu .menu .last {
+  padding-right: 0;
+}
+.zone-menu-wrapper .zone-menu .block-user-menu a {
+  color: #a9abaf;
+  text-shadow: 0px -1px 0px rgba(51, 51, 51, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.5);
   font-family: 'SnicklesRegular', sans-serif;
   text-decoration: none;
   letter-spacing: 1px;
 }
-.zone-menu .block-main-menu {
-  padding-top: 15px;
+.section-content {
+  background: #6490dc;
 }
-.zone-menu .block-user-menu a {
-  font-size: 1em;
+.zone-header-wrapper {
+  background: #aaacaf;
+  box-shadow: 0 0 11px black inset;
 }
 #zone-preface {
   padding-top: 15px;
@@ -110,7 +125,7 @@ a:hover {
 }
 .block-delta-blocks-branding {
   position: absolute;
-  top: -14px;
+  top: 25px;
   z-index: 100;
 }
 .block-delta-blocks-branding img {
@@ -119,9 +134,6 @@ a:hover {
 .zone-user .content {
   padding: 0.3em;
   margin-bottom: 10px;
-}
-.zone-menu .content {
-  padding: 1em;
 }
 .block-system-main-menu .content,
 .block-system-user-menu .content {
@@ -188,81 +200,62 @@ table.views-view-grid {
   margin: 5px;
 }
 .testimonial-block {
-  color: #5a5c5f;
-  font-size: 0.8em;
+  color: #454547;
+  font-size: 1em;
 }
-.testimonial-block td {
-  width: 50%;
-  text-align: justify;
-  vertical-align: text-top;
-  padding: 0 10px;
-}
-.testimonial-block tr:hover {
-  background: none;
+.testimonial-block .views-row {
+  margin-bottom: 30px;
 }
 .testimonial-block h3 {
-  font-size: 1.1em;
-  color: #5a5c5f;
+  font-size: 2em;
+  color: #454547;
   margin-bottom: 0px;
+  font-family: georgia;
 }
 .testimonial-block h3 a {
-  color: #5a5c5f;
+  color: #454547;
   text-decoration: none;
 }
+.testimonial-block .field-name-body {
+  font-family: georgia;
+  line-height: 1.7em;
+}
 .testimonial-block .field-name-body p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .testimonial-block .field-name-field-testament-authour {
   text-align: right;
   margin: 0;
+  float: right;
 }
 .testimonial-block .field-name-field-testament-authour .field-item:before {
   content: "- ";
 }
-.region-header-second .block {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.region-header-second .block .block-inner {
-  position: relative;
-  background: linear-gradient(bottom, #2e4366 0%, #6490dc 100%);
-  background: -o-linear-gradient(bottom, #2e4366 0%, #6490dc 100%);
-  background: -moz-linear-gradient(bottom, #2e4366 0%, #6490dc 100%);
-  background: -webkit-linear-gradient(bottom, #2e4366 0%, #6490dc 100%);
-  background: -ms-linear-gradient(bottom, #2e4366 0%, #6490dc 100%);
-  font-size: 1.5em;
-  border-radius: 10px;
-  padding: 5px 5px 0 5px;
-  text-shadow: 0px -1px 0px rgba(51, 51, 51, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.5);
-}
-.region-header-second .block .block-inner .block-title {
-  width: 200px;
-  margin: 0 auto;
-  color: #aaacaf;
-  font-size: 1.5em;
-  letter-spacing: normal;
-  text-align: center;
-  text-shadow: 0px -1px 0px rgba(51, 51, 51, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.5);
-}
-.region-header-second .block .block-inner .content {
-  position: absolute;
-  top: 9px;
-  width: 100%;
-  color: #ffffff;
-  font-size: 1em;
-}
-.region-header-second .block .block-inner .content a {
-  color: #aaacaf;
-  text-decoration: none;
-}
-.region-header-second .block .block-inner .content li:first-child {
+.block-1 .block-inner .block-title {
   float: left;
-  font-size: 1.2em;
-  top: 7px;
-  letter-spacing: -0.06em;
+  font-size: 2.5em;
+  padding: 5px 0;
+  color: #ffffff;
 }
-.region-header-second .block .block-inner .content li:last-child {
+.block-1 .block-inner .content {
+  color: #ffffff;
+  font-size: 1.6em;
+}
+.block-1 .block-inner .content ul {
+  margin-bottom: 0;
+}
+.block-1 .block-inner .content ul li {
   float: right;
+  list-style: none;
+  padding: 5px 0;
+}
+.block-1 .block-inner .content ul li:last-child {
+  font-size: 0.9em;
+}
+.block-1 .block-inner .content a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
 }
 #section-footer .content {
   padding: 20px 0 40px;
