@@ -49,7 +49,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font: 16px normal;
-  font-family: sans-serif;
+  font-family: georgia, serif;
 }
 #page {
   //background-image: url("../images/dot-1px-3x3.gif");
@@ -58,10 +58,15 @@ body {
   border-top: 4px solid @lighterGrey;
 }
 #zone-preface, #zone-content {
-
+  color: @white;
+  a {
+    color: @white;
+  }
 }
 h1, h2, h3 {
-  font-family: 'SnicklesRegular';
+  font-family: 'SnicklesRegular', georgia, serif;
+  font-weight: normal;
+  letter-spacing: normal;
 }
 h2.block-title {
   font-size: 3em;
@@ -69,9 +74,9 @@ h2.block-title {
 }
 
 a {
-  color: @rceBlue;
+  color: @lightBlue;
   &:link , &:visited {
-    color: @rceBlue;
+    color: @lightBlue;
   }
   &:hover {
     color: @lighterBlue;
@@ -128,7 +133,8 @@ a {
   }
 }
 .section-content {
-  background: @lightBlue;
+  background-color: @lightBlue;
+  background: url(../images/denim.png);
 }
 .zone-header-wrapper {
   background: @lighterGrey;
@@ -143,7 +149,7 @@ a {
 #zone-content {
 
 }
-#zone-postscript {
+.section-footer {
   background: @medGrey;
   height: 100px;
 }
@@ -233,18 +239,22 @@ table.views-view-grid {
   }
 }
 .testimonial-block {
-  color: @darkGrey;
+  color: @white;
   font-size: 1em;
+  border-left: 1px dashed white;
+  padding-left: 20px;
+  height: 100%;
+  .border-box;
   .views-row {
     margin-bottom: 30px;
   }
   h3{
     font-size: 2em;
-    color: @darkGrey;
+    color: @white;
     margin-bottom: 0px;
-    font-family: georgia;
+    font-family: 'SnicklesRegular', georgia, serif;
     a {
-      color: @darkGrey;
+      color: @white;
       text-decoration: none;
     }
   }
@@ -264,6 +274,16 @@ table.views-view-grid {
       content: "- ";
     }
   }
+}
+.block-view-services-block {
+  background: rgba(28,74,152, 0.55);
+  border-radius: 10px;
+  box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 80px;
+  margin-right: 80px;
+  color: @lightGrey;
 }
 .block-1 {
 
