@@ -6,7 +6,5 @@ sites/*/files
 sites/*/private
 
 *.sublime-projectcompletions
-
 *.sublime-project
-
 *.sublime-workspace
